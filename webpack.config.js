@@ -1,3 +1,4 @@
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
