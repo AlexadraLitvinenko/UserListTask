@@ -22,7 +22,7 @@ app.post('/user', (req, res) => {
 
   res.sendStatus(200);
 });
-
+//добавили запросы на изменение и удаление
 app.post('/change', (req, res) => {
   for (let i = 0; i < users.length; i++) {
     if (users[i].userID.includes(req.body[1])) users.splice(i, 1, req.body[0]);

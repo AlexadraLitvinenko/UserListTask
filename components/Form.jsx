@@ -19,7 +19,7 @@ class Form extends Component {
     this.onSubmit = this.onSubmit.bind(this);
     this.generateID = this.generateID.bind(this);
   }
-
+  //генерируем id для кадого юзера при нажатии "сохранить"
   generateID() {
     var pass = '';
     var strong = 10;
@@ -37,7 +37,7 @@ class Form extends Component {
     e.preventDefault();
 
     const { updateUsersList, modalOpen, userID } = this.props;
-
+    //в зависимости от того открыто ли модальное окно - копка "сохранить" меняет запрос
     if (!modalOpen) {
       createUser(this.state)
         .then(() => {

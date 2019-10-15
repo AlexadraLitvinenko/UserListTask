@@ -1,4 +1,5 @@
 import React from 'react';
+//добавили события для кнопок "удалить" и "изменить"
 const UsersList = ({ data, deleteUser, modalOpen }) => (
   <div>
     {data.length !== 0 ? (
@@ -29,5 +30,3 @@ const UsersList = ({ data, deleteUser, modalOpen }) => (
 );
 
 export default UsersList;
-
-//<button onClick={() => { this.props.updateData(this.state.name)}}>Запустить бумеранг</button>

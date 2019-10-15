@@ -11,7 +11,7 @@ class App extends Component {
     modalOpen: false,
     userID: ''
   };
-
+  //модал окно рендерится при изменении state
   modalOpen = (value, ID) => {
     this.setState({ modalOpen: value });
     this.setState({ userID: ID });
@@ -28,7 +28,7 @@ class App extends Component {
       .then(({ data }) => this.setState({ users: data }))
       .catch(showError);
   };
-
+  //запрос работает по id юзера, чтобы его инициализироать
   deleteUser = userID => () => {
     deleteUser(userID)
       .then(() => {
@@ -44,9 +44,9 @@ class App extends Component {
   }
 
   render() {
-    const { updateUsersList, deleteUser, changeUser, modalOpen } = this;
+    const { updateUsersList, deleteUser, modalOpen } = this;
     const { users, userID } = this.state;
-
+    //в модальное окно передаем необходимые стейты и функции
     return (
       <div>
         <UsersList data={users} deleteUser={deleteUser} modalOpen={modalOpen} />
