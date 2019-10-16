@@ -48,7 +48,7 @@ class App extends Component {
     const { users, userID } = this.state;
     //в модальное окно передаем необходимые стейты и функции
     return (
-      <div>
+      <div className="App">
         <UsersList data={users} deleteUser={deleteUser} modalOpen={modalOpen} />
         {this.state.modalOpen ? (
           <Modal

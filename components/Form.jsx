@@ -57,21 +57,23 @@ class Form extends Component {
     const { changeValue } = this;
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <label>
-          Имя
-          <input type="text" onChange={changeValue('firstName')} />
-        </label>
-        <label>
-          Фамилия
-          <input type="text" onChange={changeValue('secondName')} />
-        </label>
-        <label>
-          Email
-          <input type="email" onChange={changeValue('email')} />
-        </label>
-        <button onClick={this.generateID}>Сохранить</button>
-      </form>
+      <div className="Form">
+        <form onSubmit={this.onSubmit} className="Form">
+          <label>
+            Имя
+            <input type="text" onChange={changeValue('firstName')} />
+          </label>
+          <label>
+            Фамилия
+            <input type="text" onChange={changeValue('secondName')} />
+          </label>
+          <label>
+            Email
+            <input type="email" onChange={changeValue('email')} />
+          </label>
+          <button onClick={this.generateID}>Сохранить</button>
+        </form>
+      </div>
     );
   }
 }

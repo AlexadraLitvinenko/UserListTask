@@ -22,14 +22,14 @@ app.post('/user', (req, res) => {
 
   res.sendStatus(200);
 });
-//добавили запросы на изменение и удаление
+//добавили запросы на изменение
 app.post('/change', (req, res) => {
   for (let i = 0; i < users.length; i++) {
     if (users[i].userID.includes(req.body[1])) users.splice(i, 1, req.body[0]);
   }
   res.sendStatus(200);
 });
-
+//добавили заапрос на удаление
 app.delete('/user', (req, res) => {
   for (let i = 0; i < users.length; i++) {
     if (users[i].userID.includes(req.query.userID)) users.splice(i, 1);

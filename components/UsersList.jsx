@@ -3,7 +3,7 @@ import React from 'react';
 const UsersList = ({ data, deleteUser, modalOpen }) => (
   <div>
     {data.length !== 0 ? (
-      <ul>
+      <ul className="bullet">
         {data.map((item, index) => (
           <li key={index}>
             <p>{`Id: ${item.userID}`}</p>
